@@ -32,8 +32,28 @@ public class This_demo {
 
     //to pass as an argument in method, mainly used in event handling
     void m(This_demo obj){
-
+        System.out.println("Method is invoked");
+    }
+    void p(){
+        m(this);
     }
 
+    //to pass as argument in the constructor call
+    A a_obj;
+    This_demo(A a_obj){
+        this.a_obj=a_obj;
+    }
+    void display(){
+        System.out.println(a_obj.data); //Using data member of A class
+    }
+
+    //this keyword can be used to return current class instance
+
+}
+class A{
+    int data =10;
+    A() {
+        This_demo thisobj = new This_demo(this);
+    }
 
 }
