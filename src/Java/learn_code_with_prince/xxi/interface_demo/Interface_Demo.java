@@ -6,6 +6,7 @@ public class Interface_Demo implements Printable{
     // through interface we can achieve multiple inheritance and also achieve loose coupling
     // interface cannot be instantiated like abstract class. we need to implement interface
     // an interface extends another interface.
+    // an empty interface is known as marker interface. It is internally used by JVM.
     public static void main(String[] args) {
 
         new Interface_Demo().print();
