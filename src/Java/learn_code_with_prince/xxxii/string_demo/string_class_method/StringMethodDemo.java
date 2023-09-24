@@ -61,6 +61,13 @@ public class StringMethodDemo {
         //String getChars()
         //String indexOf()
         //String intern()
+        String ist1= new String("Interned String");
+        String ist2= new String("Interned String");
+        System.out.println(ist1==ist2); //prints false
+        String ist3= new String("Interned String").intern();
+        String ist4= new String("Interned String").intern();
+        System.out.println(ist3==ist4); //prints true
+
         //String isEmpty()
         //String join()
         //String lastIndexOf()
