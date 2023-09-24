@@ -2,20 +2,19 @@ package Java;
 
 
 public class Test {
-    public static void main(String[] args) {
-        int i, j, row=6;
-//outer loop for rows
-        for(i=0; i<row; i++)
-        {
-//inner loop for columns
-            for(j=0; j<=i; j++)
-            {
-//prints stars
-                System.out.print("* ");
-            }
-//throws the cursor in a new line after printing each line
-            System.out.println();
+    public static void main(String args[])throws Exception{
+        Runtime.getRuntime().exec("notepad");//will open a new notepad
+        System.out.println(Runtime.getRuntime().availableProcessors());
+        Runtime r=Runtime.getRuntime();
+        System.out.println("Total Memory: "+r.totalMemory());
+        System.out.println("Free Memory: "+r.freeMemory());
+
+        for(int i=0;i<10000;i++){
+            new Test();
         }
+        System.out.println("After creating 10000 instance, Free Memory: "+r.freeMemory());
+        System.gc();
+        System.out.println("After gc(), Free Memory: "+r.freeMemory());
     }
 }
 
