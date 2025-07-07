@@ -103,6 +103,15 @@ public class Pattern {
             }
             System.out.println();
         }
+        for (int i = 1; i <= pyramidHeight; i++) {
+            for (int j = 1; j < n-i; j++) {
+                System.out.print(" "+ " ");
+            }
+            for (int j = 1; j <= pyramidHeight; j++) {
+                System.out.print('R'+ " ");
+            }
+            System.out.println();
+        }
 
         /*------ PYRAMID------ */
         System.out.println("Pyramid");
@@ -135,8 +144,68 @@ public class Pattern {
                     System.out.print(num);
                     num++;
                 }
+                //can be done with 3 inner for loops
              }
              System.out.println();
         }
+        for (int i = 1; i <= pyramidHeight; i++) {
+            for (int j = 1; j <= pyramidHeight-i; j++) {
+                System.out.print(" "+ " ");
+            }
+            for (int j = i; j >= 1; j--) {
+                System.out.print(j + " ");
+            }
+            for (int j = 2; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+
+        /*------BUTTERFLY SHAPE------- */
+        System.out.println("Butterfly Shape");
+
+        /*
+         * i=1  1star 6spaces(2*n-i)  1star
+         * i=2  2star 4spaces(2*n-i)  2star
+         * i=3  3star 2spaces(2*n-i)  3star
+         * i=4  4star 0spaces(2*n-i)  4star
+         */
+
+         for (int i = 1; i <= pyramidHeight; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*"+ " ");
+            }
+            for (int j = 1; j <= (2*(pyramidHeight -i)); j++) {
+                System.out.print(" "+ " ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*" +" ");
+            }
+            System.out.println();
+         }
+
+         for (int i = pyramidHeight; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*"+ " ");
+            }
+            for (int j = 1; j <= (2*(pyramidHeight -i)); j++) {
+                System.out.print(" "+ " ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*"+ " ");
+            }
+            System.out.println();
+         }
+
+         for (int i = 1; i <= pyramidHeight; i++) {
+            for (int j = 1; j <= pyramidHeight-i; j++) {
+                System.out.print(" ");
+            }
+            for (int index = 1; index <= 2*i-1; index++) {
+                System.out.print("*");
+            }
+            System.out.println();
+         }
+
     }
 }
